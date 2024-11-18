@@ -120,6 +120,7 @@ export default function Carousel() {
                 >
                   {daSuggestions.map((da) => (
                     <Text
+                      key={da}
                       onClick={() => {
                         setDa(da);
                         setDASuggVisible(false);
@@ -181,6 +182,7 @@ export default function Carousel() {
                     {" "}
                     {aSuggestions.map((a) => (
                       <Text
+                        key={a}
                         onClick={() => {
                           setA(a);
                           setASuggVisible(false);
