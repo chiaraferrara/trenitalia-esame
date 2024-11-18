@@ -18,7 +18,7 @@ export default function Checkout() {
         <Heading color={"red"} fontSize={"30px"}>
           Effettua Checkout
         </Heading>
-        <h1>Totale: {totale}</h1>
+        <h1>Totale: €{totale}</h1>
         <Heading color={"red"} fontSize={"24px"}>
           Riepilogo
         </Heading>
