@@ -11,6 +11,7 @@ export default function Checkout() {
   const [scadenza, setScadenza] = useState("");
   const [cvv, setCvv] = useState("");
   const router = useRouter();
+
   return (
     <>
       <Flex direction={"column"} alignItems={"center"}>
@@ -58,6 +59,8 @@ export default function Checkout() {
           <Box mb={3}>
             <label htmlFor="cardNumber">Numero Carta:</label>
             <Input
+              w={"300px"}
+              m={2}
               value={numeroCarta}
               onChange={(e) => setNumeroCarta(e.target.value)}
               type="text"
@@ -69,6 +72,8 @@ export default function Checkout() {
           <Box mb={3}>
             <label htmlFor="cardName">Nome Intestatario:</label>
             <Input
+              w={"300px"}
+              m={2}
               value={intestatario}
               onChange={(e) => setIntestatario(e.target.value)}
               type="text"
@@ -80,6 +85,8 @@ export default function Checkout() {
           <Box mb={3}>
             <label htmlFor="expiryDate">Data di Scadenza:</label>
             <Input
+              w={"300px"}
+              m={2}
               value={scadenza}
               onChange={(e) => setScadenza(e.target.value)}
               type="text"
@@ -92,6 +99,8 @@ export default function Checkout() {
           <Box mb={3}>
             <label htmlFor="cvv">CVV:</label>
             <Input
+              w={"300px"}
+              m={2}
               value={cvv}
               onChange={(e) => {
                 setCvv(e.target.value);

@@ -7,6 +7,7 @@ import {
   Text,
   Switch,
   IconButton,
+  Heading,
 } from "@chakra-ui/react";
 import { Router, useRouter } from "next/router";
 import { useContext, useEffect, useState } from "react";
@@ -88,45 +89,48 @@ export default function Carousel() {
           width="80%"
           maxW="900px"
         >
-          <Flex direction="row" align="center">
-            <Text fontWeight="bold" color={"red"}>
-              Da
-            </Text>
-            <Input
-              onClick={() => setDASuggVisible(!daSuggVisible)}
-              size="md"
-              variant="outline"
-              value={da}
-              onChange={(e) => {
-                setDa(e.target.value);
-              }}
-              p={3}
-              border={0}
-            />
-            {daSuggVisible && (
-              <Flex
-                direction="column"
-                position="absolute"
-                top="100%"
-                left="0"
-                bg="white"
-                boxShadow="md"
-                borderRadius="md"
-                cursor={"pointer"}
-                p={4}
-              >
-                {daSuggestions.map((da) => (
-                  <Text
-                    onClick={() => {
-                      setDa(da);
-                      setDASuggVisible(false);
-                    }}
-                  >
-                    {da}
-                  </Text>
-                ))}
-              </Flex>
-            )}
+          <Flex direction={"column"} gap={2}>
+            <Heading>Trova viaggio</Heading>
+            <Flex direction="row" align="center">
+              <Text fontWeight="bold" color={"red"}>
+                Da
+              </Text>
+              <Input
+                onClick={() => setDASuggVisible(!daSuggVisible)}
+                size="md"
+                variant="outline"
+                value={da}
+                onChange={(e) => {
+                  setDa(e.target.value);
+                }}
+                p={3}
+                border={0}
+              />
+              {daSuggVisible && (
+                <Flex
+                  direction="column"
+                  position="absolute"
+                  top="100%"
+                  left="0"
+                  bg="white"
+                  boxShadow="md"
+                  borderRadius="md"
+                  cursor={"pointer"}
+                  p={4}
+                >
+                  {daSuggestions.map((da) => (
+                    <Text
+                      onClick={() => {
+                        setDa(da);
+                        setDASuggVisible(false);
+                      }}
+                    >
+                      {da}
+                    </Text>
+                  ))}
+                </Flex>
+              )}
+            </Flex>
           </Flex>
 
           <IconButton
@@ -211,11 +215,6 @@ export default function Carousel() {
                 type="time"
               />
             </Flex>
-          </Flex>
-
-          <Flex direction="column" align="center">
-            <Text fontWeight="bold">Passeggeri</Text>
-            <Input placeholder="1" size="md" variant="outline" p={2} />
           </Flex>
 
           <Button
