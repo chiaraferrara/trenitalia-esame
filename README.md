@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+Applicazione web like Trenitalia:
+- Home page
+- Pagina del singolo viaggio
+- Pagina delle promozioni
+- Simulazione carrello
+- Simulazione acquisto biglietto
 
 ## Getting Started
 
