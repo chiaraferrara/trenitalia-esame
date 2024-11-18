@@ -36,49 +36,56 @@ export default function Navbar() {
           </div>
 
           <Link
-            href="#"
+            cursor={"not-allowed"}
+            href=""
             _hover={{ color: "teal.500" }}
             fontVariant={"small-caps"}
           >
             chi siamo
           </Link>
           <Link
-            href="#"
+            cursor={"not-allowed"}
+            href=""
             _hover={{ color: "teal.500" }}
             fontVariant={"small-caps"}
           >
             frecce
           </Link>
           <Link
-            href="#"
+            cursor={"not-allowed"}
+            href=""
             _hover={{ color: "teal.500" }}
             fontVariant={"small-caps"}
           >
             intercity e internazionali
           </Link>
           <Link
-            href="#"
+            cursor={"not-allowed"}
+            href=""
             _hover={{ color: "teal.500" }}
             fontVariant={"small-caps"}
           >
             regionale
           </Link>
           <Link
-            href="#"
+            cursor={"not-allowed"}
+            href=""
             _hover={{ color: "teal.500" }}
             fontVariant={"small-caps"}
           >
             offerte
           </Link>
           <Link
-            href="#"
+            cursor={"not-allowed"}
+            href=""
             _hover={{ color: "teal.500" }}
             fontVariant={"small-caps"}
           >
             servizi
           </Link>
           <Link
-            href="#"
+            cursor={"not-allowed"}
+            href=""
             _hover={{ color: "teal.500" }}
             fontVariant={"small-caps"}
           >

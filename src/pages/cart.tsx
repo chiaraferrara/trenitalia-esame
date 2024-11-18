@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { Box, Button, Flex, Heading, Input, Text } from "@chakra-ui/react";
 import { promotions } from "@/utils/mock";
 import { useRouter } from "next/router";
+import { GoMoveToEnd } from "react-icons/go";
 
 export default function Cart() {
   const { carrello, setCarrello, totale, setTotale } =
@@ -12,11 +13,11 @@ export default function Cart() {
   const [promofound, setPromofound] = useState<boolean | null>(null);
   const [sconto, setSconto] = useState<number>(0);
   const router = useRouter();
+
   const removeFromCart = (index: number) => {
     const updatedCart = carrello.filter(
       (item: CartItem, i: number) => i !== index
     );
-    localStorage.setItem("carrello", JSON.stringify(updatedCart));
     setCarrello(updatedCart);
   };
 
@@ -110,6 +111,14 @@ export default function Cart() {
           <Text fontSize="md" mb={2} color="gray.600">
             Codice Promo:
           </Text>
+          <p
+            style={{ fontSize: "10px", cursor: "pointer" }}
+            onClick={() => {
+              router.push("/");
+            }}
+          >
+            Controlla promozioni <GoMoveToEnd size={"10px"} />
+          </p>
           <Flex>
             <Input
               size="md"

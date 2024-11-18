@@ -7,7 +7,7 @@ export default function Footer() {
         as="footer"
         py={4}
         textAlign="center"
-        bg="#ffffff"
+        bg="#e6e6e6"
         color="black"
         bottom={0}
         minHeight={"fit-content"}
